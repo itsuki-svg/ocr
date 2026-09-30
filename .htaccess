@@ -1,0 +1,21 @@
+# ── セキュリティ設定 ──
+
+# includesディレクトリへの直接アクセスを禁止
+<FilesMatch "^(config\.php|composer\.json)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# PHPエラーを非表示
+php_flag display_errors Off
+
+# セキュリティヘッダー
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# セッションのセキュリティ
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1
