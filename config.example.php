@@ -28,18 +28,18 @@ define('APP_URL', getenv('APP_URL') ?: 'https://example.com/ocr');
 define('APP_SECRET', getenv('APP_SECRET') ?: 'your_secret_here');
 
 // Google OAuth
-define('GOOGLE_CLIENT_ID',     getenv('GOOGLE_CLIENT_ID')     ?: '123456789012-abcdefghijklmnopqrstuvwxyz012345.apps.googleusercontent.com');
-define('GOOGLE_CLIENT_SECRET', getenv('GOOGLE_CLIENT_SECRET') ?: 'GOCSPX-abcdefghijklmnopqrstuvwxyz');
+define('GOOGLE_CLIENT_ID',     getenv('GOOGLE_CLIENT_ID')     ?: 'your_google_client_id_here');
+define('GOOGLE_CLIENT_SECRET', getenv('GOOGLE_CLIENT_SECRET') ?: 'your_google_client_secret_here');
 define('GOOGLE_REDIRECT_URI',  APP_URL . '/api/auth/callback.php');
 
 // Google Service Account JSON（1行で貼り付け）
 define('GOOGLE_SERVICE_ACCOUNT_JSON', getenv('GOOGLE_SERVICE_ACCOUNT_JSON') ?: '');
-define('SHEET_ID',        getenv('SHEET_ID')        ?: '1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789abcd');
-define('LOG_SHEET_ID',    getenv('LOG_SHEET_ID')    ?: '1XyZaBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789');
-define('DRIVE_FOLDER_ID', getenv('DRIVE_FOLDER_ID') ?: '1aBcDeFgHiJkLmNoPqRsTuVwXyZ01234');
+define('SHEET_ID',        getenv('SHEET_ID')        ?: 'your_google_sheet_id_here');
+define('LOG_SHEET_ID',    getenv('LOG_SHEET_ID')    ?: 'your_log_sheet_id_here');
+define('DRIVE_FOLDER_ID', getenv('DRIVE_FOLDER_ID') ?: 'your_drive_folder_id_here');
 
 // Gemini API
-define('GEMINI_API_KEY', getenv('GEMINI_API_KEY') ?: 'AIzaSyA-abcdefghijklmnop0123456789_qrst');
+define('GEMINI_API_KEY', getenv('GEMINI_API_KEY') ?: 'your_gemini_api_key_here');
 
 // Cron 認証キー
 define('CRON_SECRET', getenv('CRON_SECRET') ?: 'your_cron_secret_here');
